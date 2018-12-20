@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8"/>
+  <title>Proyecto E-commerce Bootstrap4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- se muestren bien y el zoom funciona en móviles-->
+  <!--bootstrap alojado-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!--======== PRIMERA FILA: MENU PRINCIPAL, ARRIBA========-->
+    <div class="row">
+      <div class="col-12"> <!--ocupa las 12 columnas-->
+        <!--<nav class="navbar navbar-inverse"> inverse: estilo negro, letra gris- navbar-fixed-top: fijarla arriba-->
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+
+              <!-- Título -->
+              <a class="navbar-brand" href="#">E-commerce</a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraDesplegable">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="barraDesplegable">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Canasta</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Salir</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!--========SEGUNDA FILA: CUERPO GENERAL DE LA PAGINA========-->
+    <div class="row">
+
+      <div class="col-lg-3"> <!--menú izquierda ocupa 4 columnas-->
+        <div class="col-lg-9"> <!--Cada item (camiseta) ocupa 3, para un total de 9 colum-->
+
+          <!--=========BARRA IZQUIERDA DE BUSQUEDA=========-->
+          <br>
+          <div class="input-group col-sm-12">
+            <input type="text" class="form-control" placeholder="Buscar camisetas">
+            <span class="input-group-append">
+              <button type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </span>
+          </div>
+
+          <!-- ===========MENU CATEGORIAS===========-->
+          <br>
+          <div class="d-none d-lg-block">
+            <h3><strong>Categorias</strong></h3>
+            <nav class="container">
+              <ul class="nav nav-pills flex-column nav-left">
+                <li class="nav-item "><a class="nav-link active" href="#">Todos <span class="badge badge-light float-right">100</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Hombre <span class="badge badge-light float-right">4</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mujer <span class="badge badge-light float-right">12</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Hipster <span class="badge badge-light float-right">24</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Metal <span class="badge badge-light float-right">6</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Universidad <span class="badge badge-light float-right">5</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Deportiva <span class="badge badge-light float-right">8</span> </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Rayas <span class="badge badge-light float-right">11</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Apretada <span class="badge badge-light float-right">19</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!--==========PANEL DERECHA========-->
+      <div class="col-lg-9">
+
+        <!--=========1) CARRUSEL DE IMAGENES CENTRAl=========-->
+        <br>
+        <div id="demo" class="carousel slide col-lg-12" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="imagenes/Imagen 1.jpg" alt="Camiseta 1" style="width:100%;"></div>
+            <div class="carousel-item"><img src="imagenes/Imagen 2.jpg" alt="Camiseta 2" style="width:100%;"></div>
+            <div class="carousel-item"><img src="imagenes/Imagen 3.jpg" alt="Camiseta 3" style="width:100%;"></div>              
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+
+        <!--========TERCERA FILA: SECCION DE PRODUCTOS========-->
+        <div class="row d-flex justify-content-around" id=products>
+          <!--<div class="col-lg-12 d-flex justify-content-start" id=products>-->
+
+            <!--Producto No. 1-->
+            <div class="col-5 col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="imagenes/Camiseta 1.jpg" alt="camiseta hipster" style="width:100%;">
+                  <h4><strong>Hipster Ultimate</strong></h4>
+                  <p>La camiseta ideal para Hipters.</p>
+
+                  <!--BOTON PRECIO: producto 1 -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">$229<span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                  <!--BOTON DETALLES: Modal producto 1-->
+                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Detalles</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <!--Header del modal-->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Hipster Ultimate</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!--Contenido del modal-->
+                        <div class="modal-body">
+                          <!--FILA: Producto agotado-->
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="alert alert-info">
+                                <i class="fas fa-info-circle"></i>
+                                <strong>Este producto está agotado.</strong>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <!--COLUMNA: Imagen camiseta-->
+                            <div class="col-lg-6">
+                              <img src="imagenes/Camiseta 1.jpg" class="img-thumbnail" alt="camiseta 1" style="width:100%"> 
+                            </div> 
+                            <!--COLUMNA: Precio, calificación etc.--> 
+                            <div class="col-lg-6">
+                              <p>Precio:<strong>$299</strong></p> <!--Precio--> 
+                              <p>Calificación: <!--Calificación, con estrellas-->
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </p> 
+                              <p><!--Hspeter y deportiva-->
+                                <span class="badge badge-warning">Hipster</span>
+                                <span class="badge badge-secondary">Deportiva</span>
+                              </p>
+                              <p> <!--Deseos-->
+                                <a href="url"><i class="fas fa-heart"></i>Agregar a los deseos</a>
+                              </p>
+                            </div>
+                          </div>
+                          <p>
+                            <!--BARRA: Comentarios y descripción-->
+                            <ul class="nav nav-tabs">
+                              <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Descripción</a></li>
+                              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Comentarios</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                              <div id="home" class="container tab-pane active">
+                                <br>
+                                <p>Para este proyecto se implementa la estructura de una página web para un sitio e-commerce,
+                                utilizando HTML, CSS y Bootstrap como se muestra en la imagen. </p>
+                              </div>
+                              <div id="menu1" class="container tab-pane fade">
+                                <div class="card">
+                                  <div class="card-header">Germán Escobar comentó hace días</div>
+                                  <div class="card-body">Esta camiseta está increible, la quiero!</div>
+                                </div>
+                                <textarea class="form-control" rows="3" id="comment" placeholder="Ingresa tu comentario"></textarea>
+                              </div>
+                            </div>
+                          </p>
+                        </div>
+                        <!--FOOTER: cerrar y comprar-->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary">Comprar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!--Producto No. 2-->
+            <div class="col-5 col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="imagenes/Camiseta 2.jpg" alt="camiseta 2" style="width:100%;">
+                  <h4><strong>On Motion Live</strong></h4>
+                  <p>Perfecta para salidas rocosas.</p>
+                  <button type="button" class="btn btn-primary">$29<span class="glyphicon glyphicon-shopping-cart"></span></button>
+                  <button type="button" class="btn btn-default">Detalles</button>
+                </div>
+              </div>
+            </div>
+
+            <!--Producto No. 3-->
+            <div class="col-5 col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="imagenes/Camiseta 3.jpg" alt="camiseta-3" style="width:100%;">
+                  <h4><strong>Underground Max</strong></h4>
+                  <p>Para los amantes del underground.</p>
+                  <button type="button" class="btn btn-primary">$29<span class="glyphicon glyphicon-shopping-cart"></span></button>
+                  <button type="button" class="btn btn-default">Detalles</button>
+                </div>
+              </div>
+            </div>
+
+            <!--Producto No. 4-->
+            <div class="col-5 col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="imagenes/Camiseta 4.jpg" alt="camiseta-4" style="width:100%;">
+                  <h4><strong>Santo Domingo Tigers</strong></h4>
+                  <p>La camiseta ideal </p>
+                  <button type="button" class="btn btn-primary">$29<span class="glyphicon glyphicon-shopping-cart"></span></button>
+                  <button type="button" class="btn btn-default">Detalles</button>
+                </div>
+              </div>
+            </div>
+
+            <!--Producto No. 5-->
+            <div class="col-5 col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="imagenes/Camiseta 5.jpg" alt="camiseta-5" style="width:100%;">
+                  <h4><strong>Una camiseta mas</strong></h4>
+                  <p>La camiseta ideal para Hipters</p>
+                  <button type="button" class="btn btn-primary">$29<span class="glyphicon glyphicon-shopping-cart"></span></button>
+                  <button type="button" class="btn btn-default">Detalles</button>
+                </div>
+              </div>
+            </div>
+
+            <!--</div>-->
+          </div>
+
+        </div>
+
+      </div>      
+    </div>
+  </body>
+  </html>
